@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ThemeToggle } from "@/app/components/theme-toggle";
+import { TeamSearchGrid } from "@/app/components/team-search-grid";
 import { getAllTeamReports } from "@/lib/teams";
 
 export default function HomePage() {
@@ -11,23 +11,13 @@ export default function HomePage() {
         <div>
           <h1 className="title">Team analysis dashboard</h1>
           <p className="subtitle">
-            Click any team card to open its full evaluation report.
+            Click any team card to view the full evaluation report.
           </p>
         </div>
         <ThemeToggle />
       </header>
 
-      <section className="grid">
-        {teams.map((team) => (
-          <Link key={team.teamName} href={`/team/${team.slug}`} className="card">
-            <h2 className="team-name">{team.teamName}</h2>
-            <p className="score">
-              Score: {team.score ?? "N/A"} / 100
-            </p>
-            <p className="meta">Percentage: {team.percentage ?? "N/A"}%</p>
-          </Link>
-        ))}
-      </section>
+      <TeamSearchGrid teams={teams} />
     </main>
   );
 }
