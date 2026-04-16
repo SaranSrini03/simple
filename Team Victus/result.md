@@ -41,8 +41,18 @@ Scores:
 
 Final Score: 93/100 (93%)
 
+Execution Score: 93/100
+
 Comments:
 
 * Scoring is based only on verifiable code artifacts, not feature claims.
 * 14/20 expected features have strong evidence in code.
 * Missing or partial features need concrete code paths, not only README statements.
+
+Architecture:
+
+* Key: fullstack
+* Classification: Full stack
+* Frontend Signals: 62
+* Backend Signals: 27
+* Weight: 1.00

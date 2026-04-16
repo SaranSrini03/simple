@@ -29,8 +29,18 @@ Scores:
 
 Final Score: 2/100 (2%)
 
+Execution Score: 1/100
+
 Comments:
 
 * Repository URL is inaccessible or invalid; code could not be audited.
 * All expected features marked missing due to unavailable codebase.
 * Submission cannot be considered complete without a valid repository.
+
+Architecture:
+
+* Key: unknown
+* Classification: Unknown architecture
+* Frontend Signals: 0
+* Backend Signals: 0
+* Weight: 0.45

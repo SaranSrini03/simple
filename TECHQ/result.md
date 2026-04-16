@@ -25,8 +25,18 @@ Scores:
 
 Final Score: 38/100 (38%)
 
+Execution Score: 17/100
+
 Comments:
 
 * Scoring is based only on verifiable code artifacts, not feature claims.
 * 2/6 expected features have strong evidence in code.
 * Missing or partial features need concrete code paths, not only README statements.
+
+Architecture:
+
+* Key: unknown
+* Classification: Unknown architecture
+* Frontend Signals: 0
+* Backend Signals: 0
+* Weight: 0.45

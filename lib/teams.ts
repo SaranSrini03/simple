@@ -58,6 +58,11 @@ function parseFinalScore(content: string): { score: number | null; percentage: n
   return m ? { score: Number(m[1]), percentage: Number(m[2]) } : { score: null, percentage: null };
 }
 
+function parseExecutionScore(content: string): number | null {
+  const m = content.match(/Execution Score:\s*(\d+)\/100/i);
+  return m ? Number(m[1]) : null;
+}
+
 function parseFeatures(content: string): FeatureItem[] {
   const section = content.match(/Feature Breakdown:\s*\n([\s\S]*?)(?=\nMissing Features:)/i);
   if (!section) return [];
@@ -108,7 +113,7 @@ function parseScores(content: string): ScoreBreakdown {
 }
 
 function parseComments(content: string): string[] {
-  const section = content.match(/Comments:\s*\n([\s\S]*?)$/i);
+  const section = content.match(/Comments:\s*\n([\s\S]*?)(?=\nArchitecture:|$)/i);
   if (!section) return [];
 
   return section[1]
@@ -118,6 +123,54 @@ function parseComments(content: string): string[] {
     .filter(Boolean);
 }
 
+function weightFor(level: ComplexityLevel): number {
+  if (level === "fullstack") return 1;
+  if (level === "backend_only") return 0.78;
+  if (level === "frontend_only") return 0.58;
+  return 0.45;
+}
+
+function labelFor(level: ComplexityLevel): string {
+  if (level === "fullstack") return "Full stack";
+  if (level === "frontend_only") return "Frontend only (no backend found)";
+  if (level === "backend_only") return "Backend only";
+  return "Unknown architecture";
+}
+
+function parseArchitecture(content: string): TeamReport["complexity"] | null {
+  const section = content.match(/Architecture:\s*\n([\s\S]*?)$/i);
+  if (!section) return null;
+  const getVal = (label: string) => {
+    const rx = new RegExp(`\\*\\s*${label}:\\s*(.+)$`, "im");
+    const m = section[1].match(rx);
+    return m ? m[1].trim() : null;
+  };
+  const key = getVal("Key");
+  const front = Number(getVal("Frontend Signals") ?? "0");
+  const back = Number(getVal("Backend Signals") ?? "0");
+  const level: ComplexityLevel =
+    key === "fullstack" || key === "frontend_only" || key === "backend_only" || key === "unknown"
+      ? key
+      : "unknown";
+  return {
+    level,
+    label: getVal("Classification") ?? labelFor(level),
+    hasFrontend: front > 0,
+    hasBackend: back > 0,
+    frontendSignals: Number.isNaN(front) ? 0 : front,
+    backendSignals: Number.isNaN(back) ? 0 : back,
+    normalizedWeight: weightFor(level),
+    reason:
+      level === "fullstack"
+        ? "Detected frontend and backend signals in repository structure."
+        : level === "frontend_only"
+          ? "Detected UI/frontend stack only, backend signals missing."
+          : level === "backend_only"
+            ? "Detected backend stack without clear frontend app."
+            : "Not enough evidence to classify repository architecture.",
+  };
+}
+
 function isTeamFolder(dirName: string): boolean {
   const excluded = new Set(["app", "lib", "node_modules", ".next", ".git", "repos", "public"]);
   return !excluded.has(dirName);
@@ -125,8 +178,10 @@ function isTeamFolder(dirName: string): boolean {
 
 function buildReport(teamName: string, content: string): Omit<TeamReport, "rank"> {
   const { score, percentage } = parseFinalScore(content);
-  const complexity = detectRepoComplexity(teamName);
-  const adjustedScore = score === null ? null : Math.round(score * complexity.normalizedWeight);
+  const complexity = parseArchitecture(content) ?? detectRepoComplexity(teamName);
+  const executionScore = parseExecutionScore(content);
+  const adjustedScore =
+    executionScore ?? (score === null ? null : Math.round(score * complexity.normalizedWeight));
   return {
     teamName,
     slug: encodeURIComponent(teamName),

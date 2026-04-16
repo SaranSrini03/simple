@@ -1,4 +1,4 @@
-﻿import json, os, re
+import json, os, re
 from pathlib import Path
 
 root = Path(r"C:\Users\DELL\Desktop\simple")
@@ -46,6 +46,15 @@ def file_text(p: Path):
     except Exception:
         return ''
 
+def architecture_from_flags(has_front: bool, has_back: bool):
+    if has_front and has_back:
+        return ('fullstack', 'Full stack', 1.00)
+    if has_front:
+        return ('frontend_only', 'Frontend only (no backend found)', 0.58)
+    if has_back:
+        return ('backend_only', 'Backend only', 0.78)
+    return ('unknown', 'Unknown architecture', 0.45)
+
 entries=[]
 seen_repo={}
 for row in teams:
@@ -62,6 +71,9 @@ for row in teams:
         fc=0; cq=1; inn=1; comp=0; doc=0; bonus=0
         final=fc+cq+inn+comp+doc+bonus
         missing = [f for f,st,_ in results if st!='âœ…']
+        has_front=False; has_back=False
+        arch_key, arch_label, arch_weight = architecture_from_flags(has_front, has_back)
+        front_signals=0; back_signals=0
     else:
         files = gather_files(repo_dir)
         readme = next((p for p in files if p.name.lower().startswith('readme')), None)
@@ -101,6 +113,8 @@ for row in teams:
         # quality heuristics
         has_front=any('frontend' in str(p).lower() or 'client' in str(p).lower() or 'src' in str(p).lower() for p,_ in texts)
         has_back=any('backend' in str(p).lower() or 'server' in str(p).lower() or 'api' in str(p).lower() for p,_ in texts)
+        front_signals = sum(1 for p,_ in texts if ('frontend' in str(p).lower() or 'client' in str(p).lower() or 'src' in str(p).lower()))
+        back_signals = sum(1 for p,_ in texts if ('backend' in str(p).lower() or 'server' in str(p).lower() or 'api' in str(p).lower()))
         has_tests=any('test' in p.name.lower() for p,_ in texts)
         has_cfg=any(p.suffix.lower() in {'.yml','.yaml','.json'} for p,_ in texts)
         py_js = sum(1 for p,_ in texts if p.suffix.lower() in {'.py','.js','.ts','.tsx','.jsx'})
@@ -118,6 +132,7 @@ for row in teams:
         bonus=min(20, max(0, round((3 if has_tests else 0) + (4 if has_front else 0) + (4 if has_back else 0) + 9*feature_ratio)))
         final=fc+cq+inn+comp+doc+bonus
         missing=[f for f,st,_ in results if st!='âœ…']
+        arch_key, arch_label, arch_weight = architecture_from_flags(has_front, has_back)
 
     team_dir = root / team
     team_dir.mkdir(exist_ok=True)
@@ -153,9 +168,17 @@ for row in teams:
     lines.append(f'* Documentation: {doc}/10')
     lines.append(f'* Bonus: {bonus}/20')
     lines.append(f'\nFinal Score: {final}/100 ({final}%)\n')
+    adjusted = round(final * arch_weight)
+    lines.append(f'Execution Score: {adjusted}/100\n')
     lines.append('Comments:\n')
     for c in comments:
         lines.append(f'* {c}')
+    lines.append('\nArchitecture:\n')
+    lines.append(f'* Key: {arch_key}')
+    lines.append(f'* Classification: {arch_label}')
+    lines.append(f'* Frontend Signals: {front_signals}')
+    lines.append(f'* Backend Signals: {back_signals}')
+    lines.append(f'* Weight: {arch_weight:.2f}')
 
     (team_dir / 'result.md').write_text('\n'.join(lines)+"\n", encoding='utf-8')
     entries.append({'team': team, 'score': final, 'pct': final})

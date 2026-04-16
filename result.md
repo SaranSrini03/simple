@@ -10,19 +10,19 @@
 | Team Agile | 82/100 | 82% |
 | Quantara | 79/100 | 79% |
 | codex | 77/100 | 77% |
+| Code Warriors | 74/100 | 74% |
 | HONEYWELL | 72/100 | 72% |
 | Hack Knights | 71/100 | 71% |
 | 4xFound | 71/100 | 71% |
 | DIGITAL DAZZLERS | 69/100 | 69% |
-| Code Warriors | 68/100 | 68% |
+| Code vigilantes | 67/100 | 67% |
 | Tech Sages | 67/100 | 67% |
-| Winverse | 64/100 | 64% |
-| KANON | 61/100 | 61% |
+| Winverse | 63/100 | 63% |
+| KANON | 62/100 | 62% |
+| FinBridge | 59/100 | 59% |
 | Ai Visioneers | 59/100 | 59% |
 | Nexus Node | 55/100 | 55% |
-| FinBridge | 54/100 | 54% |
 | TEAM TOXIC | 52/100 | 52% |
-| Code vigilantes | 51/100 | 51% |
 | CODE CATALYST | 40/100 | 40% |
 | TECHQ | 38/100 | 38% |
 | Machine Marvels | 2/100 | 2% |
@@ -37,19 +37,19 @@
 - 7. Team Agile (82/100)
 - 8. Quantara (79/100)
 - 9. codex (77/100)
-- 10. HONEYWELL (72/100)
-- 11. Hack Knights (71/100)
-- 12. 4xFound (71/100)
-- 13. DIGITAL DAZZLERS (69/100)
-- 14. Code Warriors (68/100)
-- 15. Tech Sages (67/100)
-- 16. Winverse (64/100)
-- 17. KANON (61/100)
-- 18. Ai Visioneers (59/100)
-- 19. Nexus Node (55/100)
-- 20. FinBridge (54/100)
-- 21. TEAM TOXIC (52/100)
-- 22. Code vigilantes (51/100)
+- 10. Code Warriors (74/100)
+- 11. HONEYWELL (72/100)
+- 12. Hack Knights (71/100)
+- 13. 4xFound (71/100)
+- 14. DIGITAL DAZZLERS (69/100)
+- 15. Code vigilantes (67/100)
+- 16. Tech Sages (67/100)
+- 17. Winverse (63/100)
+- 18. KANON (62/100)
+- 19. FinBridge (59/100)
+- 20. Ai Visioneers (59/100)
+- 21. Nexus Node (55/100)
+- 22. TEAM TOXIC (52/100)
 - 23. CODE CATALYST (40/100)
 - 24. TECHQ (38/100)
 - 25. Machine Marvels (2/100)

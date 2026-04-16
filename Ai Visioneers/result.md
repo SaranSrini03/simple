@@ -30,8 +30,18 @@ Scores:
 
 Final Score: 59/100 (59%)
 
+Execution Score: 34/100
+
 Comments:
 
 * Scoring is based only on verifiable code artifacts, not feature claims.
 * 3/9 expected features have strong evidence in code.
 * Missing or partial features need concrete code paths, not only README statements.
+
+Architecture:
+
+* Key: frontend_only
+* Classification: Frontend only (no backend found)
+* Frontend Signals: 76
+* Backend Signals: 0
+* Weight: 0.58
