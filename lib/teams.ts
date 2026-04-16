@@ -1,5 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
+import { detectRepoComplexity } from "@/lib/repo-complexity";
+import type { ComplexityLevel } from "@/lib/repo-complexity";
 
 export type FeatureItem = {
   name: string;
@@ -21,11 +23,22 @@ export type TeamReport = {
   slug: string;
   rank: number;
   score: number | null;
+  adjustedScore: number | null;
   percentage: number | null;
   features: FeatureItem[];
   missingFeatures: string[];
   scores: ScoreBreakdown;
   comments: string[];
+  complexity: {
+    level: ComplexityLevel;
+    label: string;
+    hasFrontend: boolean;
+    hasBackend: boolean;
+    frontendSignals: number;
+    backendSignals: number;
+    normalizedWeight: number;
+    reason: string;
+  };
   raw: string;
 };
 
@@ -112,15 +125,19 @@ function isTeamFolder(dirName: string): boolean {
 
 function buildReport(teamName: string, content: string): Omit<TeamReport, "rank"> {
   const { score, percentage } = parseFinalScore(content);
+  const complexity = detectRepoComplexity(teamName);
+  const adjustedScore = score === null ? null : Math.round(score * complexity.normalizedWeight);
   return {
     teamName,
     slug: encodeURIComponent(teamName),
     score,
+    adjustedScore,
     percentage,
     features: parseFeatures(content),
     missingFeatures: parseMissing(content),
     scores: parseScores(content),
     comments: parseComments(content),
+    complexity,
     raw: content,
   };
 }
@@ -137,7 +154,11 @@ export function getAllTeamReports(): TeamReport[] {
       return buildReport(entry.name, content);
     })
     .filter((r): r is Omit<TeamReport, "rank"> => r !== null)
-    .sort((a, b) => (b.score ?? -1) - (a.score ?? -1));
+    .sort((a, b) => {
+      const byAdjusted = (b.adjustedScore ?? -1) - (a.adjustedScore ?? -1);
+      if (byAdjusted !== 0) return byAdjusted;
+      return (b.score ?? -1) - (a.score ?? -1);
+    });
 
   return reports.map((r, i) => ({ ...r, rank: i + 1 }));
 }

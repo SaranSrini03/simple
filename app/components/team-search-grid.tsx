@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import type { GitLiteSummary } from "@/lib/git-stats";
 import type { TeamReport } from "@/lib/teams";
 
 type Props = {
   teams: TeamReport[];
+  gitByTeam: Record<string, GitLiteSummary>;
 };
 
 function scoreColor(pct: number | null): "high" | "mid" | "low" {
@@ -15,7 +17,16 @@ function scoreColor(pct: number | null): "high" | "mid" | "low" {
   return "low";
 }
 
-export function TeamSearchGrid({ teams }: Props) {
+function formatShortDate(iso: string | null): string | null {
+  if (!iso) return null;
+  try {
+    return new Date(iso).toLocaleDateString(undefined, { dateStyle: "medium" });
+  } catch {
+    return null;
+  }
+}
+
+export function TeamSearchGrid({ teams, gitByTeam }: Props) {
   const [query, setQuery] = useState("");
 
   const filteredTeams = useMemo(() => {
@@ -40,6 +51,13 @@ export function TeamSearchGrid({ teams }: Props) {
       <section className="grid">
         {filteredTeams.map((team) => {
           const color = scoreColor(team.percentage);
+          const git =
+            gitByTeam[team.teamName] ?? {
+              lastCommitIso: null,
+              authorCount: 0,
+              behindRemote: null,
+            };
+          const last = formatShortDate(git.lastCommitIso);
           return (
             <Link key={team.teamName} href={`/team/${team.slug}`} className="card">
               <div className="card-header">
@@ -54,8 +72,29 @@ export function TeamSearchGrid({ teams }: Props) {
                 />
               </div>
 
+              <div className="card-git">
+                <span className={`complexity-badge complexity-${team.complexity.level}`}>
+                  {team.complexity.label}
+                </span>
+                {team.complexity.level === "frontend_only" && (
+                  <span className="complexity-warning">Only frontend found</span>
+                )}
+                {git.authorCount > 0 && (
+                  <span>
+                    {git.authorCount} contributor{git.authorCount === 1 ? "" : "s"}
+                    {last ? ` · Last commit ${last}` : ""}
+                  </span>
+                )}
+                {git.authorCount === 0 && <span>No local repo clone</span>}
+                {git.behindRemote !== null && git.behindRemote > 0 && (
+                  <span className="git-behind-badge">{git.behindRemote} behind remote</span>
+                )}
+              </div>
+
               <div className="card-footer">
-                <span>{team.score ?? 0}/100</span>
+                <span>
+                  {team.score ?? 0}/100 raw · {team.adjustedScore ?? 0}/100 execution
+                </span>
                 <span className="view-label">View report</span>
               </div>
             </Link>

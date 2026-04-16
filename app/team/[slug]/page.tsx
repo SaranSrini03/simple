@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { GitActivitySection } from "@/app/components/git-activity-section";
 import { ThemeToggle } from "@/app/components/theme-toggle";
+import { getTeamGitStats } from "@/lib/git-stats";
 import { getTeamReportBySlug } from "@/lib/teams";
 import type { ScoreBreakdown, FeatureItem } from "@/lib/teams";
 
@@ -37,6 +39,8 @@ export default async function TeamDetailsPage({ params }: TeamPageProps) {
     notFound();
   }
 
+  const gitStats = getTeamGitStats(report.teamName, { fetchRemote: false });
+
   const heroColor =
     (report.percentage ?? 0) >= 70
       ? "var(--green)"
@@ -67,6 +71,9 @@ export default async function TeamDetailsPage({ params }: TeamPageProps) {
               </span>
             </p>
             <p className="hero-rank">Rank #{report.rank} of all evaluated teams</p>
+            <p className="hero-rank">
+              Execution-aware score: {report.adjustedScore ?? 0}/100 ({report.complexity.label})
+            </p>
           </div>
           <span
             className={`pct-badge ${(report.percentage ?? 0) >= 70 ? "high" : (report.percentage ?? 0) >= 45 ? "mid" : "low"}`}
@@ -98,6 +105,25 @@ export default async function TeamDetailsPage({ params }: TeamPageProps) {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="section">
+        <h2 className="section-title">Architecture complexity check</h2>
+        <div className="complexity-panel">
+          <span className={`complexity-badge complexity-${report.complexity.level}`}>
+            {report.complexity.label}
+          </span>
+          <p>{report.complexity.reason}</p>
+          <p>
+            Frontend signals: {report.complexity.frontendSignals} · Backend signals:{" "}
+            {report.complexity.backendSignals}
+          </p>
+          {report.complexity.level === "frontend_only" && (
+            <p className="complexity-warning">
+              Backend was not found; this repo is treated as frontend-only for ranking.
+            </p>
+          )}
         </div>
       </section>
 
@@ -142,6 +168,8 @@ export default async function TeamDetailsPage({ params }: TeamPageProps) {
           </ul>
         </section>
       )}
+
+      <GitActivitySection teamName={report.teamName} stats={gitStats} />
     </main>
   );
 }

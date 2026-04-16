@@ -531,3 +531,266 @@ a {
     align-items: flex-start;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* home: pull all + git hints on cards                                 */
+/* ------------------------------------------------------------------ */
+.home-sync-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.home-sync-summary {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.card-git {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+  min-height: 1.2em;
+}
+
+.git-behind-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--yellow-bg);
+  color: var(--yellow);
+}
+
+.complexity-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.complexity-fullstack {
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.complexity-frontend_only {
+  background: var(--red-bg);
+  color: var(--red);
+}
+
+.complexity-backend_only {
+  background: var(--yellow-bg);
+  color: var(--yellow);
+}
+
+.complexity-unknown {
+  background: var(--surface-raised);
+  color: var(--muted);
+}
+
+.complexity-warning {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.complexity-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+/* ------------------------------------------------------------------ */
+/* team page: git activity                                             */
+/* ------------------------------------------------------------------ */
+.git-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.git-section .section-title {
+  margin-bottom: 4px;
+}
+
+.git-sub {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.git-path {
+  font-size: 0.78rem;
+  background: var(--surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+.git-branch {
+  margin-left: 6px;
+}
+
+.repo-sync-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.repo-sync-msg {
+  font-size: 0.75rem;
+  color: var(--muted);
+  max-width: 280px;
+  text-align: right;
+}
+
+.git-warn {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.git-delta {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  background: var(--surface-raised);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.git-h3 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin: 16px 0 8px;
+}
+
+.git-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.author-freq {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+.author-freq-row {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) 3fr auto;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.82rem;
+}
+
+.author-freq-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.author-freq-track {
+  height: 8px;
+  background: var(--surface-raised);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.author-freq-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--brand), var(--brand-soft));
+}
+
+.author-freq-count {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  min-width: 2.5rem;
+  text-align: right;
+}
+
+.git-table-wrap {
+  overflow-x: auto;
+  margin-top: 8px;
+}
+
+.git-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.git-table th {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.git-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.git-td-date {
+  white-space: nowrap;
+  color: var(--muted);
+}
+
+.git-td-author {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.git-td-subj {
+  word-break: break-word;
+}
+
+.git-td-hash code {
+  font-size: 0.75rem;
+  background: var(--surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .author-freq-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .author-freq-count {
+    text-align: left;
+  }
+
+  .repo-sync-inline {
+    align-items: flex-start;
+  }
+
+  .repo-sync-msg {
+    text-align: left;
+    max-width: none;
+  }
+}
