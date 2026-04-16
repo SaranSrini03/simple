@@ -1,0 +1,185 @@
+﻿[
+    {
+        "team":  "Hack Knights",
+        "repo":  "https://github.com/Advaya-2K26/Hack-Knights.git",
+        "features_raw":  "An AI-driven welfare system with ML-based eligibility and fraud detection, GIS mapping, blockchain transparency, real-time processing, and scalable microservices with dashboard monitoring.",
+        "problem":  "Fraudulent claims, identity abuse, lack of transparency, and exclusion of genuine households make current welfare distribution inefficient and unreliable.",
+        "solution":  "An AI-driven system using machine learning, GIS mapping, and blockchain to ensure accurate eligibility, detect fraud, and provide transparent, scalable welfare distribution."
+    },
+    {
+        "team":  "Code vigilantes",
+        "repo":  "https://github.com/Advaya-2K26/Code-Vigilantes.git",
+        "features_raw":  "Ai chat-box interaction with voice assistant, emergency health numbers, x-ray scanning ",
+        "problem":  "Good health and well-being ",
+        "solution":  "Providing ai based chat-box interaction which includes voice assistance for the user to check his/her symptoms, scanning x-ray to detect the abnormalities "
+    },
+    {
+        "team":  "HONEYWELL",
+        "repo":  "https://github.com/Advaya-2K26/Honeywell.git",
+        "features_raw":  "Real-time food donation posting, Smart demand prediction, Nearest NGO matching, Business idea model, Live tracking dashboard, popup message.",
+        "problem":  "Zero Hunger:\nDesign a real-time surplus food management platform for NGOs, temples, and restaurants in cities like Bengaluru and Chennai that uses demand forecasting and route optimization algorithms to efficiently redistribute excess food to urban slums and shelters.",
+        "solution":  "Real-time food donation posting, Smart demand prediction, Nearest NGO matching, Business idea model, Live tracking dashboard.\n\n\n\n"
+    },
+    {
+        "team":  "Code Warriors",
+        "repo":  "https://github.com/Advaya-2K26/Code-Warriors.git",
+        "features_raw":  "Integration with wearable health devices to track real-time vitals like heart rate, oxygen levels, and blood pressure, use of advanced AI for predictive disease detection and early risk assessment, expansion into mental health support with AI-based counseling and expert consultation, integration with government health schemes for automated eligibility and benefits access, enable e-pharmacy services for medicine ordering and doorstep delivery in rural areas, deployment of IoT-based diagnostic tools in clinics for faster and more accurate health data collection.",
+        "problem":  "Rural and semi-urban regions in South India face limited access to quality healthcare due to a shortage of doctors, lack of diagnostic facilities, poor digital record systems, and language barriers. Patients often travel long distances for basic medical services, resulting in delayed diagnosis and treatment. This leads to worsening health conditions, higher healthcare costs, and increased mortality rates, especially for preventable diseases.",
+        "solution":  "Develop an AI-assisted telehealth platform that connects patients, rural clinics, and urban healthcare providers into a single system. The platform will enable multilingual symptom checking, remote doctor consultations, AI-based medical image analysis, and cloud-based storage of patient records. It will be designed to work efficiently even in low-bandwidth environments, ensuring accessibility in remote areas."
+    },
+    {
+        "team":  "Elite4",
+        "repo":  "https://github.com/Advaya-2K26/Elite4.git",
+        "features_raw":  "Live GPS tracking, real-time location sharing, AI risk score (0–100), heart rate based SOS detection, voice-based risk detection, manual SOS button, automatic emergency alert trigger, SMS notification to contacts, automated voice call to emergency contacts, safety timer,pin trigger,live map,heat crime map,follow detection,Near by safe places, Rights\u0026Laws,Complaint filing ,  webcam capturing",
+        "problem":  "Create an AI-powered women safety application for urban users in metropolitan areas like Hyderabad that integrates real-time GPS tracking, anomaly detection (voice/stress recognition), and direct API linkage with police emergency systems.\n",
+        "solution":  "We propose an AI-powered Women Safety System that detects danger in real time and automatically triggers emergency alerts.\n\nThe system uses:\n\nLive GPS tracking to share location instantly\nTwilio SMS \u0026 Call API to notify emergency contacts\nAI risk scoring (0–100) based on heart rate and behavior signals\nManual SOS button + automatic SOS triggers\n\nWhen risk crosses a threshold or SOS is pressed, the system immediately sends SMS + live location + automated call to saved contacts."
+    },
+    {
+        "team":  "codex",
+        "repo":  "https://github.com/Advaya2k26Teams/codex.git",
+        "features_raw":  "Food donation system with multi-step form (type, quantity, condition, location) Food request module for NGOs and communities AI-based matching between donors, requests, and volunteers Real-time live map tracking of donations and deliveries Volunteer management for pickup and delivery Delivery proof verification with photo and GPS tracking Smart alerts and notifications for nearby food availability Impact dashboard showing meals saved and people fed Reward system to encourage donors and volunteers",
+        "problem":  "A significant amount of food is wasted daily from restaurants, events, and households, while many people in urban areas continue to suffer from hunger. The absence of a real-time and efficient system to connect food donors with those in need results in delays, poor coordination, and unnecessary wastage. Existing solutions largely depend on manual efforts by NGOs, which are often slow, unorganized, and difficult to scale. Additionally, there is limited transparency and tracking in the distribution process. Therefore, there is a need for a smart, technology-driven platform that can efficiently redistribute surplus food and help reduce hunger.",
+        "solution":  "Annadana AI is an AI-powered platform that connects surplus food donors with needy communities in real time.\nDonors can quickly upload food details, including type, quantity, and location.\nThe system uses intelligent matching to connect donations with nearby requests and volunteers.\nA live map enables real-time tracking of food distribution and delivery status.\nThis solution reduces food waste, improves efficiency, and helps fight hunger at scale."
+    },
+    {
+        "team":  "4xFound",
+        "repo":  "https://github.com/Advaya2k26Teams/4xfound.git",
+        "features_raw":  "Role based login,different dashboard for different users,task management and approval workflow,inventory tracking, QR attendance, predictive maintenance module, phone vibration sensor capture, microphone noice detection,7 days degradation trend analysis. ",
+        "problem":  "Industry,innovation and infrastructure ",
+        "solution":  "Problem: Unexpected machine failures cause ?20,000-60,000 loss per incident.\n\nSolution: Phone-based sensor system captures real-time vibration/noise, learns machine baselines, detects degradation 3-7 days before failure."
+    },
+    {
+        "team":  "Nexus Node",
+        "repo":  "https://github.com/Advaya-2K26/Nexus-Node.git",
+        "features_raw":  "Facial recognition, trip planner, automatic sos.",
+        "problem":  "Create an AI-powered women safety application for urban users in metropolitan areas like Hyderabad that integrates real-time GPS tracking, anomaly detection (voice/stress recognition), and direct API linkage with police emergency systems.",
+        "solution":  "SheRide is a women-exclusive mobility and empowerment platform designed to provide safe transportation, skill development, and community support in one unified system, going beyond services like Uber and Ola Cabs. It ensures safety through a strict women-only verification process using government ID checks, live selfie verification, and periodic re-authentication, along with a driver allocation system that allows only verified female drivers. The platform also promotes community bonding through group rides, “ride and learn” programs, mentorship by experienced women drivers, and verified meetups. Its advanced “Trip Guardian” feature provides automated safety monitoring by detecting route deviations, delays, and unusual activity, triggering alerts and live tracking without requiring user action. Additional emergency features like SOS, voice-trigger detection, and post-ride safety checks further enhance protection. Beyond safety, SheRide empowers women economically by enabling them to earn as drivers, mentors, and trainers, fostering independence, confidence, and leadership within a supportive ecosystem."
+    },
+    {
+        "team":  "Machine Marvels",
+        "repo":  "https://github.com/orgs/Advaya-2K26/teams/machine-marvels.git",
+        "features_raw":  "Farmer data entry using speker, list the crops in Blockchain, Retailer priceing, customer buy a product,track the food , Blockchain ledger,price transparency map",
+        "problem":  "Today\u0027s Agricultural supply chain faces multiple challenges. There is limited transparency between farmers and consumers, making it difficult to verify product origin . Adulteration and counterfeit produce reduce trust in the market.Farmers often received unfair prices due to middleman.Additionally,poor tracking and logistics lead to significant wastage ",
+        "solution":  "To address these issues,we developed AgriChain- a secure digital traceability platform.It also tracks and produce from farm to retail using cryptographic hashing for tamper detection.Our platform verifies origin, increases pricing transparency,provides real- time supply chain visibility,and allows consumers to verify product authenticity "
+    },
+    {
+        "team":  "Winverse",
+        "repo":  "https://github.com/Advaya-2K26/Winverse.git",
+        "features_raw":  "A smart, real-time digital platform designed to reduce food waste by connecting donors, NGOs, and volunteers, Donors such as restaurants, temples, and event organizers can instantly upload surplus food details, NGOs and shelters receive real-time notifications for quick response, Volunteers are automatically assigned to handle pickups and deliveries efficiently, The system optimizes delivery routes to save time and resources, It also provides end-to-end tracking to ensure transparency and timely distribution of food to those in need",
+        "problem":  "Zero Hunger \u0027Sharebite\u0027",
+        "solution":  "A smart, real-time digital platform designed to reduce food waste by seamlessly connecting donors (restaurants, temples, events) with NGOs and shelters in need. Donors can instantly upload surplus food details, triggering real-time notifications to nearby NGOs, while volunteers are automatically assigned for quick pickup and delivery. With optimized routing and end-to-end tracking, the platform ensures efficient, transparent, and timely distribution of food—turning surplus into support for those who need it most.\n"
+    },
+    {
+        "team":  "Bitheads",
+        "repo":  "https://github.com/Advaya2k26Teams/bitheads.git",
+        "features_raw":  "Real-time Prithvi-EO-2.0 satellite inference, Multi-factor risk scoring (satellite + elevation + coastal proximity + 12h rainfall forecast), Automated emergency phone call alerts via Twilio, WhatsApp shelter alerts with Google Maps links, OpenStreetMap shelter finder (schools/hospitals/temples), Monsoon simulation mode (Cyclone Michaung 2023), Interactive flood overlay map with 67 pre-computed tiles, Bilingual alerts (English/Tamil/Telugu), Live weather integration via Open-Meteo API, Predictive early warning system (12-hour forecast window)",
+        "problem":  "Build an AI-powered climate risk prediction system for coastal districts in that uses satellite imagery, weather data, and deep learning to forecast floods and cyclones with early warning alerts.",
+        "solution":  "An AI-powered Coastal Climate Risk Prediction System that uses NASA\u0027s Prithvi-EO-2.0 satellite foundation model to detect flood-prone areas from satellite imagery and fuses it with real-time weather forecasts, elevation data, and coastal proximity to generate predictive flood risk scores. When risk exceeds critical levels, the system automatically triggers emergency phone calls and WhatsApp messages with nearest shelter locations and Google Maps navigation links — enabling early evacuation 12 hours before a flood hits."
+    },
+    {
+        "team":  "KANON",
+        "repo":  "https://github.com/Advaya2k26Teams/kanon.git",
+        "features_raw":  "Multilingual Symptom Bot, Voice-to-Text Diagnostic Interface, Edge AI Image Analysis (X-Ray Cavitation Detection), TensorFlow Lite Mobile Inference, MongoDB Atlas Cloud EHR, Device Sync for Offline Data Persistence, ABDM-Compliant Secure Health Locker, Doctor-in-the-Loop Validation Dashboard, AI-Generated Diagnostic Heatmaps, React Native Cross-Platform Mobile UI.",
+        "problem":  "Rural South India faces a critical \"Healthcare Paradox\" where high population density meets severe specialist shortages (1 doctor per 10,000 people). Primary barriers include:\n\nGeographic Isolation: Patients in regions like East Godavari or Warangal must travel over 40km for basic diagnostics, resulting in lost wages and delayed treatment.\n\nThe Language Divide: Most existing healthcare technology is built in English, creating a massive barrier for rural populations speaking Telugu, Kannada, or Tamil.\n\nData Fragmentation: Physical medical records (X-ray films, paper prescriptions) are frequently lost or damaged during seasonal migration, leading to a lack of longitudinal patient history.",
+        "solution":  "Kanon is an AI-assisted telehealth platform designed specifically for the rural South Indian infrastructure. It acts as a \"force multiplier\" for ASHA workers and local clinics by:\n\nUtilizing Bhashini API for voice-based symptom checking in native Indic languages.\n\nDeploying Edge AI (TensorFlow Lite) to provide instant on-device analysis of X-rays and Ultrasound clips, detecting conditions like Tuberculosis or high-risk pregnancy markers without requiring high-speed internet.\n\nSynchronizing all diagnostic data to a secure MongoDB Atlas Cloud EHR, ensuring a migrant worker’s health history is accessible to any doctor across state lines."
+    },
+    {
+        "team":  "Tech Sages",
+        "repo":  "https://github.com/Advaya-2K26/TechSages.git",
+        "features_raw":  "Blockchain-based tamper-proof complaint logging, complaint submission portal for citizens, offline complaint filing via local agents, real-time complaint tracking system, citizen-confirmed resolution workflow, dispute and complaint reopening mechanism, AI-based semantic clustering of similar complaints, duplicate complaint detection, geospatial grouping of complaints, systemic issue identification and escalation, live heatmap showing high and low issue density areas, multilingual complaint handling support, admin dashboard for departments, public transparency interface, automated notifications and updates, immutable audit trail of all actions, cross-department complaint routing, resolution performance analytics and insights, user certification and badge system for active and verified contributors",
+        "problem":  "Despite the existence of digital grievance redressal platforms in India, the current systems suffer from lack of trust, transparency, and accountability. Complaints filed by citizens are often marked as “resolved” without actual on-ground action, creating a disconnect between official records and real outcomes. This leads to widespread dissatisfaction and erodes public trust in governance.\n\nAdditionally, these systems treat each complaint as an isolated case, failing to identify duplicate or systemic issues affecting larger populations. Citizens in rural and underserved areas also face barriers in accessing digital platforms, further widening the participation gap.\n\nThere is also no reliable mechanism to ensure that complaint records remain tamper-proof, making it possible for data to be altered or manipulated. Moreover, the absence of citizen verification in the resolution process allows authorities to close cases without true accountability.\n\nHence, there is a critical need for a system that ensures transparent, verifiable, and citizen-driven grievance resolution while also identifying larger systemic problems from individual complaints.",
+        "solution":  "We propose a blockchain-enabled, AI-powered grievance redressal system that ensures complaints are not just recorded, but verifiably resolved with transparency and accountability.\n\nThe system allows citizens to file complaints either directly through a digital platform or via local agents, ensuring accessibility even in rural and underserved areas. Each complaint is securely logged, and every action taken such as status updates or resolution is recorded as a tamper-proof hash on the blockchain. This guarantees that records cannot be altered or manipulated, building trust in the system.\n\nA key innovation is the citizen-confirmed resolution mechanism. Unlike traditional systems where officials can close complaints unilaterally, our platform requires the citizen to confirm whether the issue has truly been resolved. If the citizen disagrees, the complaint is automatically reopened, enforcing real accountability.\n\nTo address inefficiencies at scale, the system integrates an AI-based clustering engine that analyzes complaints using semantic understanding and groups similar issues together. This transforms multiple individual complaints into systemic insights, enabling authorities to identify and act on widespread problems more effectively.\n\nThe platform also includes real-time tracking, automated notifications, and administrative dashboards, allowing both citizens and government officials to monitor progress transparently. By combining blockchain for trust, AI for intelligence, and inclusive design for accessibility, the solution shifts grievance redressal from a procedural task to a proof-driven, citizen-centric accountability system."
+    },
+    {
+        "team":  "Team Victus",
+        "repo":  "https://github.com/Advaya2k26Teams/team-victory.git",
+        "features_raw":  "Risk classification, multi-parameter input system (rainfall, wind, humidity, seismic), disaster-specific analysis (flood, cyclone, earthquake), time-based disaster simulation, pattern analysis (risk vs time, parameter influence), interactive real-world map visualization, dynamic location-based analysis, evacuation route generation, alert management system, AI-based decision recommendations, impact estimation (population and severity), audit trail and history logging, multi-screen dashboard (analysis, simulation, alerts, history, intelligence), responsive UI (desktop and mobile), real-time API integration",
+        "problem":  "To Build an AI-powered climate risk prediction system for coastal districts in that uses satellite imagery, weather data, and deep learning to forecast floods and cyclones with early warning alerts.\n",
+        "solution":  "We built Climate Guardian — an AI-powered disaster simulation and decision intelligence system that not only predicts risk, but simulates how disasters evolve and provides actionable recommendations in real time"
+    },
+    {
+        "team":  "TEAM TOXIC",
+        "repo":  "https://github.com/Advaya-2K26/Team-Toxic.git",
+        "features_raw":  "Centralized Dashboard,Automated Eligibility Detection,Synthetic Data Simulation,GIS Mapping \u0026 Visualization,Auto-Enrollment Workflow,Transparency \u0026 Efficiency,Scalable Architecture,Privacy Compliance,Engaging UI/UX:",
+        "problem":  "\nWelfare enrollment in districts is manual, slow, and error-prone, leading to delays in support\nEligible families are often excluded due to lack of systematic identification\nAdministrators have limited visibility into poverty distribution, making resource allocation inefficient.\nData is fragmented and outdated, preventing real-time decision-making.\nNo centralized platform exists for monitoring households, eligibility, and enrollment status.\nCurrent processes lack transparency and scalability, reducing trust and impact of welfare schemes.",
+        "solution":  "\nDevelop a centralized Welfare Intelligence System that integrates data, analytics, and enrollment workflows\nUse synthetic household datasets to simulate real-world conditions and test the system.\nApply machine learning models to score households and automatically detect eligibility.\nProvide GIS heatmaps to visualize poverty hotspots and welfare coverage across districts.\nBuild a modular architecture with React frontend, Node.js backend, and Flask ML microservice for scalability.\nEnable auto-enroll workflows to reduce manual effort and ensure faster inclusion of eligible families\nEnsure privacy compliance by using synthetic data and secure APIs."
+    },
+    {
+        "team":  "Quantara",
+        "repo":  "https://github.com/Advaya-2K26/Quantara.git",
+        "features_raw":  "Centralized Hub, Security Check,  Organized events data and Companies contributed, Bulk E-Mail option with AI ",
+        "problem":  "Organizations working toward the United Nations Sustainable Development Goals (SDGs) often operate in isolation with limited communication and data sharing. This leads to duplication of projects, inefficient use of resources, and uneven development across regions. As a result, overall progress toward SDGs is slow and lacks coordination.\n\n",
+        "solution":  "The project proposes an AI-powered centralized platform that connects NGOs, government agencies, startups, and volunteers. It enables real-time collaboration, data sharing, and efficient resource management. The system also uses AI and geo-based insights to recommend partnerships and identify high-need areas.\n"
+    },
+    {
+        "team":  "RetentionX",
+        "repo":  "https://github.com/Advaya2k26Teams/retentionx.git",
+        "features_raw":  "Model Training, Frontend",
+        "problem":  "Small and medium manufacturing units in industrial hubs face frequent machine failures due to the lack of affordable, real-time monitoring and predictive maintenance systems. Existing maintenance approaches are largely reactive or schedule-based, leading to unexpected downtime, increased operational costs, and reduced productivity.\n\nThere is a critical need for a cost-effective, intelligent predictive maintenance solution that leverages edge computing and deep learning to enable real-time fault detection, minimize machine downtime, and enhance overall industrial efficiency.\n",
+        "solution":  "Small and medium manufacturing units in industrial hubs face frequent machine failures due to the lack of affordable, real-time monitoring and predictive maintenance systems. Existing maintenance approaches are largely reactive or schedule-based, leading to unexpected downtime, increased operational costs, and reduced productivity.\nThere is a critical need for a cost-effective, intelligent predictive maintenance solution that leverages edge computing and deep learning to enable real-time fault detection, minimize machine downtime, and enhance overall industrial efficiency.Such a system will empower small and medium enterprises to transition from reactive to proactive maintenance, ensuring sustainable and scalable industrial growth."
+    },
+    {
+        "team":  "CODE CATALYST",
+        "repo":  "https://github.com/Advaya-2K26/Code-Catalyst.git",
+        "features_raw":  "Real-time machine monitoring, AI-based failure prediction, machine listing dashboard, issue detection, temporary repair suggestions, permanent repair solutions, smart alerts, cost impact analysis, digital twin simulation, edge-based data processing",
+        "problem":  "Small and medium manufacturing industries face frequent unexpected machine failures due to reactive maintenance practices, leading to high downtime, increased repair costs, and reduced productivity. Most systems lack real-time monitoring, early failure prediction, and actionable repair guidance, making it difficult for factory managers to take timely preventive or corrective actions.",
+        "solution":  "SmartAI Factory Guardian is an AI-based predictive maintenance system that monitors machine health in real time and predicts failures before they occur. It provides instant alerts along with temporary fixes and permanent repair solutions, helping reduce downtime and maintenance costs. A dashboard shows all machines and their status, enabling smarter and faster decision-making."
+    },
+    {
+        "team":  "DIGITAL DAZZLERS",
+        "repo":  "https://github.com/Advaya-2K26/Digital-Dazzlers.git",
+        "features_raw":  "Monitor H2 production from solar, wind, and hydropower Track electrolyzer efficiency \u0026 H2 output in real-time Detect leaks and anomalies via IoT sensors \u0026 auto-alerts Enable remote dashboard for operators \u0026 management Optimize energy consumption \u0026 reduce OPEX Contribute to net-zero \u0026 green energy targets",
+        "problem":  " Develop a smart green hydrogen production monitoring system that leverages IoT sensors and artificial intelligence to optimize efficiency, reduce energy wastage, and ensure sustainable hydrogen generation by effectively integrating solar and wind energy sources.\n",
+        "solution":  "Sensor Integration – Deploy IoT sensors (H2 flow meter, pressure, temperature, gas leak detector) connected via MQTT protocol for real-time data acquisition.\nData Processing \u0026 Dashboard – Process sensor data using Python/Flask backend, store in InfluxDB, and visualize live metrics on Grafana web dashboard.\nAlert \u0026 Safety System – Implement threshold-based alerts with automated electrolyzer shutdown on gas leak or pressure breach; SMS \u0026 email notifications via Twilio.\n\n\n"
+    },
+    {
+        "team":  "VIRTUAL",
+        "repo":  "https://github.com/Advaya2k26Teams/virtual.git",
+        "features_raw":  "Features Implemented:  Blockchain-based Immutable Ledger, Real-time WhatsApp Bot Integration, AI-Powered Quality Grading, Transparent Reverse Auction System, Smart Contract Escrow Payments, Direct UPI QR Code Integration, Multi-Role Dashboard (Farmer/Agent/Retailer), Real-time Bid Tracking, Automated Price Discovery, Fraud-Resistant Digital Signatures, Location-based Produce Mapping, Verified Delivery Confirmation, Instant Wallet Settlements.",
+        "problem":  " Responsible Consumption and Production\nCreate a blockchain-based agri-supply chain platform for farmers and consumers that tracks farm produce from cultivation to retail, ensuring transparency, fair pricing, and reduced wastage.",
+        "solution":  "   Our solution directly addresses the goal of Responsible Consumption and Production (SDG 12) by digitizing the agricultural supply chain through blockchain technology.\n\nFarmBid tracks produce from the moment of cultivation to the final retail sale using an AI-integrated WhatsApp bot for instant field-side listing and quality verification. By facilitating a transparent reverse auction, we ensure fair pricing for farmers while drastically reducing wastage caused by inefficient middleman logistics and inventory information gaps. Every milestone of the supply chain—from initial listing to the final delivery—is anchored to the Polygon blockchain, providing a tamper-proof ledger of trust and traceability for both producers and consumers. With a secure smart-contract escrow system that locks funds until delivery is confirmed, FarmBid creates a sustainable, direct-to-market ecosystem that stabilizes the food supply chain and empowers rural producers."
+    },
+    {
+        "team":  "Team Agile",
+        "repo":  "https://github.com/Advaya-2K26/Team-Agile.git",
+        "features_raw":  "Image analytics, prioritisation allocation between donors and NGO\u0027s",
+        "problem":  "Zero Hunger\nDesign a real-time surplus food management platform for NGOs, temples, and restaurants in cities like Bengaluru and Chennai that uses demand forecasting and route optimization algorithms to efficiently redistribute excess food to urban slums and shelters.",
+        "solution":  "Our proposed solution is FoodAid, a real-time web platform that connects surplus food donors with NGOs and social workers, then matches donations to the most suitable community based on location, urgency, demand, and food quality. It reduces food waste and improves timely redistribution through live tracking, smart matching, demand forecasting, and route-aware delivery support."
+    },
+    {
+        "team":  "TEAM API",
+        "repo":  "https://github.com/Advaya-2K26/TEAM-API.git",
+        "features_raw":  "Smartphone Edge Sensing, Real-Time WebSocket Telemetry, Rolling Window Feature Extraction, Unsupervised Isolation Forest, Live PCA Visualization, Dynamic Anomaly Scoring, React Command Center Dashboard, Zero-CapEx MSME Retrofit",
+        "problem":  "Build a predictive maintenance system for small and medium manufacturing units in industrial hubs using edge computing, and deep learning to minimize machine downtime and maintenance costs.\n",
+        "solution":  "Project Aegis democratizes predictive maintenance for MSMEs by turning ubiquitous smartphones into non-invasive, zero-CapEx industrial sensors. Using an unsupervised Isolation Forest on edge-processed telemetry, the system learns a machine’s unique healthy baseline to mathematically detect micro-anomalies days before catastrophic failure. This shifts legacy factories from reactive repairs to proactive maintenance, directly advancing SDG 9 by sustainably modernizing industrial infrastructure."
+    },
+    {
+        "team":  "FinBridge",
+        "repo":  "https://github.com/Advaya-2K26/FinBridge.git",
+        "features_raw":  "Member Dashboard, AI Credit Scoring, Loan Eligibility Prediction, SHG Analytics, Financial Profile View, Loan History Tracking, Savings \u0026 Income Analysis, Participation Score, Smart AI Suggestions, Interactive Dashboard UI",
+        "problem":  "10. Reduced Inequalities\nDesign an AI-powered microfinance platform for rural women self-help groups (SHGs) in South India that uses alternative data (transaction history, mobile usage) for credit scoring and provides seamless access to financial services via mobile apps.",
+        "solution":  "Our solution is an AI-powered microfinance platform that uses alternative data like savings, SHG participation, and repayment behavior to generate credit scores and enable underserved women to access fair and timely loans."
+    },
+    {
+        "team":  "TECHQ",
+        "repo":  "https://github.com/Advaya-2K26/TechQ.git",
+        "features_raw":  "SOS button to trigger emergency manually Voice detection to identify distress sounds Shake detection using phone movement Secret code (420) for hidden emergency activation AI-based detection to identify danger automatically Location access for sharing current position Automatic reset after emergency",
+        "problem":  "Gender Equality – Create an AI-powered women safety application for urban users in metropolitan areas like Hyderabad that integrates real-time GPS tracking, anomaly detection (voice/stress recognition), and direct API linkage with police emergency systems.",
+        "solution":  "SURAKSHA AI"
+    },
+    {
+        "team":  "DIGITAL DAZZLERS",
+        "repo":  "https://github.com/Advaya-2K26/Digital-Dazzlers.git",
+        "features_raw":  "Monitor H2 production from solar, wind, and hydropower Track electrolyzer efficiency \u0026 H2 output in real-time Detect leaks and anomalies via IoT sensors \u0026 auto-alerts Enable remote dashboard for operators \u0026 management Optimize energy consumption \u0026 reduce OPEX Contribute to net-zero \u0026 green energy targets",
+        "problem":  " Develop a smart green hydrogen production monitoring system that leverages IoT sensors and artificial intelligence to optimize efficiency, reduce energy wastage, and ensure sustainable hydrogen generation by effectively integrating solar and wind energy sources.\n",
+        "solution":  "Monitor H2 production from solar, wind, and hydropower\nTrack electrolyzer efficiency \u0026 H2 output in real-time\nDetect leaks and anomalies via IoT sensors \u0026 auto-alerts\nEnable remote dashboard for operators \u0026 management\nOptimize energy consumption \u0026 reduce OPEX\nContribute to net-zero \u0026 green energy targets\n\n\n"
+    },
+    {
+        "team":  "Ai Visioneers",
+        "repo":  "https://github.com/Advaya2k26Teams/aivisionaries.git",
+        "features_raw":  "Multilingual video lessons (Tamil, English, Telugu, Kannada), Grade 1-5 core subject quizzes (Maths, Social, EVS, Science), and score-based API adaptive difficulty scaling.",
+        "problem":  "Eduplay - Ai powered gane based learning ",
+        "solution":  "EduPlay is an AI-powered, game-based learning platform designed to make education \"irresistibly fun, deeply personalized, and accessible\" in the native languages of the students. It specifically targets students in rural government schools who may interact more with smartphones than textbooks."
+    }
+]
+
